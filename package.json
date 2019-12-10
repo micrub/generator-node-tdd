@@ -59,8 +59,8 @@
   },
   "scripts": {
     "prepublish": "nox nsp check",
-    "pretest": "npx eslint .",
-    "test": "npx mocha "
+    "pretest": "npx eslint ./generators/",
+    "test": "npx mocha __tests__/"
   },
   "lint-staged": {
     "*.js": [

@@ -15,4 +15,4 @@ const logs = [
   createLog('silly')
 ];
 
-logs.map((log, index) => setTimeout(()=> logger[log.level](log.message), index * 100));
+logs.map((log, index) => setTimeout(() => logger[log.level](log.message), index * 100));
