@@ -10,8 +10,6 @@ describe('generator-node-tdd:app', () => {
       return helpers
         .run(path.join(__dirname, '../generators/app'))
         .withPrompts({
-          name: 'Ulises Santana',
-          email: 'ulises@foo.bar',
           moduleVersion: '0.1.0',
           moduleLicense: 'MIT',
           moduleName: 'test-project',
@@ -34,6 +32,5 @@ describe('generator-node-tdd:app', () => {
      } catch (err){
        assert.fail(err.actual, err.false, err.message);
      }
-
   });
 });
