@@ -31,6 +31,7 @@
     "coveralls": "^2.13.1",
     "eslint": "^4.1.0",
     "eslint-config-prettier": "^2.4.0",
+    "eslint-config-strict": "^14.0.1",
     "eslint-config-xo": "^0.18.2",
     "eslint-plugin-prettier": "^2.2.0",
     "husky": "^0.14.3",
@@ -53,9 +54,9 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
-    "pretest": "eslint .",
-    "test": "mocha "
+    "prepublish": "nox nsp check",
+    "pretest": "npx eslint .",
+    "test": "npx mocha "
   },
   "lint-staged": {
     "*.js": [
