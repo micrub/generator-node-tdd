@@ -5,17 +5,16 @@
   "main": "<%= buildDirectory %>/index.js",
   "scripts": {
     "start": "npx nodemon --exec babel-node <%= buildDirectory %>/index.js",
-    "start:babel": "babel-node src/index.js",
-    "test": "mocha --ui tdd --require babel-core/register '<%= testDirectory %>/**/*.test.js'",
+    "start:babel": "npx babel-node src/index.js",
+    "test": "npx mocha --ui tdd --compilers js:@babel/register '<%= testDirectory %>/**/*.test.js'",
     "tdd": "npm test -- --watch",
-    "build": "babel src -d <%= buildDirectory %>",
-    "dev": "nodemon --watch src --exec babel-node src/index.js"
+    "build": "npx babel src -d <%= buildDirectory %>",
+    "dev": "npx nodemon --watch src --exec babel-node src/index.js"
   },
   "author": "<%= name %> <<%= email %>>",
   "license": "<%= moduleLicense %>",
   "dependencies": {
-    "winston": "2.4.1",
-    "mocha": "^4.0.1"
+    "winston": "2.4.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
@@ -34,6 +33,7 @@
     "jest": "^21.0.0",
     "jest-cli": "^21.0.0",
     "lint-staged": "^4.2.1",
+    "mocha": "^6.2.2",
     "nodemon": "^2.0.1",
     "nsp": "^2.6.3",
     "prettier": "^1.7.0",
