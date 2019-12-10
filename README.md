@@ -1,5 +1,5 @@
 # generator-node-tdd [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> A boilerplate for NodeJS projects with Mocha and Babel 
+> A boilerplate for NodeJS projects with Mocha and Babel
 
 ## Boilerplate
 
@@ -40,17 +40,7 @@ The posible structures of the boilerplate are the following ones:
      └── index.js
 ```
 
-And these are the scripts from the `package.json`:
-```json
- "scripts": {
-    "start": "node dist/index.js",
-    "start:babel": "babel-node src/index.js",
-    "test": "mocha --ui tdd --require babel-core/register 'test/**/*.test.js'",
-    "tdd": "npm test -- --watch",
-    "build": "babel src -d dist",
-    "dev": "nodemon --watch src --exec babel-node src/index.js"
-  },
-```
+Check out a `scripts` section of generated `package.json` for run-script definitions.
 
 ## Installation
 
