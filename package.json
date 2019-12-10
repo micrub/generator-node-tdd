@@ -58,7 +58,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nox nsp check",
+    "prepublish": "echo TODO!!!",
     "pretest": "npx eslint ./generators/",
     "test": "npx mocha __tests__/"
   },
