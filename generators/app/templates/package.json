@@ -11,10 +11,6 @@
     "build": "babel src -d <%= buildDirectory %>",
     "dev": "nodemon --watch src --exec babel-node src/index.js"
   },
-  "keywords": [
-    <% moduleKeywords.forEach(function(keyword, i, arr) { %>"<%= keyword %>"<% if (i !== arr.length - 1) { %>,
-    <% } %><% }); %>
-  ],  
   "author": "<%= name %> <<%= email %>>",
   "license": "<%= moduleLicense %>",
   "dependencies": {
